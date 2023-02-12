@@ -1,15 +1,23 @@
-let month = ["January","February","March","April","May","June","July","Aug","Sep","Oct","Nov","Dec"]
+let month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
 let today = new Date()
 let systemDate = new Date()
 const week1 = new Date(2023,0,30);
 let selectedMonth
-let calendar = document.getElementById('calendar')
 
 
-function generateCalendar(date) {
+function generateCalendar(date,prevOrNext) {
 
     //clear calendar
-    calendar.innerHTML=''
+    //calendar.innerHTML=''
+    
+    const element = document.getElementById('calendar');
+    element.remove(); // Removes the div
+
+    const main = document.getElementById('main')
+    main.insertAdjacentHTML('beforeend',`<div id="calendar" class="grid" data-role="touch" data-on-swipe-right="prevMonth" data-on-swipe-left="nextMonth"></div>`)
+
+    let calendar = document.getElementById('calendar')
+
     document.getElementById(`month`).innerHTML =`${month[date.getMonth()]}`
     document.getElementById(`year`).innerHTML =`${date.getFullYear()}`
 
@@ -20,11 +28,11 @@ function generateCalendar(date) {
     let totalDays =  lastDay.getDate()
     let monday
     let count = 0
-    console.log(`selected month: ${selectedMonth}`)
-    console.log(`previous month: ${prevMonth}`)
-    console.log(`last day: ${lastDay}`)
-    console.log(`first day: ${firstDay}`)
-    console.log(`total days: ${totalDays}`)
+    //console.log(`selected month: ${selectedMonth}`)
+    //console.log(`previous month: ${prevMonth}`)
+    //console.log(`last day: ${lastDay}`)
+    //console.log(`first day: ${firstDay}`)
+    //console.log(`total days: ${totalDays}`)
     //determine which date is the first monday on calendar screen
 
     if (selectedMonth.getDay() !== 1) {
@@ -248,19 +256,35 @@ if (lastDay.getDay() !==6) {
         }
     }
 
-
+    //animate entrance
+    if (prevOrNext == 'next') {
+        document.getElementById('calendar').classList.add(`animate__animated`)
+    document.getElementById('calendar').classList.add(`animate__fadeInRight`)
+    document.getElementById('calendar').classList.add(`animate__fast`)
+    } else {
+    document.getElementById('calendar').classList.add(`animate__animated`)
+    document.getElementById('calendar').classList.add(`animate__fadeInLeft`)
+    document.getElementById('calendar').classList.add(`animate__fast`)
+    }
 }
 
 function nextMonth() {
  selectedMonth = new Date(selectedMonth.getFullYear(),selectedMonth.getMonth()+1)
- generateCalendar(selectedMonth)
+ document.getElementById('calendar').classList.add(`animate__animated`)
+ document.getElementById('calendar').classList.add(`animate__fadeOutLeft`)
+ document.getElementById('calendar').classList.add(`animate__fast`)
+ setTimeout(()=>generateCalendar(selectedMonth,'next'), 350)
+ //generateCalendar(selectedMonth)
 
 }
 
 function prevMonth() {
     selectedMonth = new Date(selectedMonth.getFullYear(),selectedMonth.getMonth()-1)
     generateCalendar(selectedMonth)
-   
+    document.getElementById('calendar').classList.add(`animate__animated`)
+    document.getElementById('calendar').classList.add(`animate__fadeOutRight`)
+    document.getElementById('calendar').classList.add(`animate__fast`)
+    setTimeout(()=>generateCalendar(selectedMonth,'prev'), 350)
 }
 
 
