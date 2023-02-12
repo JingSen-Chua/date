@@ -9,11 +9,15 @@
   <meta name="author" content="SitePoint">
 
   <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 
-<body>
+<body style="height: 100vh; width: 98vw; overflow:hidden;" class="animate__animated animate__fadeIn animate_slower" data-role="touch" data-on-swipe-right="prevMonth" data-on-swipe-left="nextMonth">
     <!--<div style="padding-left:20px;display:flex"><h1 id="month">March</h1> &nbsp <h1 id="year">2023</h1></div>-->
-    <div style="display: flex;flex-direction: column;width: 95%; margin: 0 auto;">
+    <div id="main" style="display: flex;flex-direction: column;width: 95%; margin: 0 auto;">
       <div style="display:flex;margin: 0vw 7vw;justify-content: space-between;">
         <div style="display:flex"><h2 id="month">March</h2> &nbsp <h2 id="year">2023</h2>
         </div>
@@ -31,61 +35,7 @@
         <Text class="square">Fr</Text>
         <Text class="square">Sa</Text>
       </div>
-      <div id="calendar" class="grid" data-role="touch" data-on-swipe-right="prevMonth" data-on-swipe-left="nextMonth"></div>
-      <!--<div class="grid">
-          <Text id="box-0"class="square"></Text>
-          <Text id="box-1" class="square"></Text>
-          <Text id="box-2"class="square"></Text>
-          <Text id="box-3"class="square"></Text>
-          <Text id="box-4"class="square"></Text>
-          <Text id="box-5"class="square"></Text>
-          <Text id="box-6"class="square"></Text>
-      </div>
-      <div class="grid">
-        <Text id="box-7"class="square"></Text>
-        <Text id="box-8"class="square"></Text>
-        <Text id="box-9"class="square"></Text>
-        <Text id="box-10"class="square"></Text>
-        <Text id="box-11"class="square"></Text>
-        <Text id="box-12"class="square"></Text>
-        <Text id="box-13"class="square"></Text>
-      </div>
-      <div class="grid">
-        <Text id="box-14"class="square"></Text>
-        <Text id="box-15"class="square"></Text>
-        <Text id="box-16"class="square"></Text>
-        <Text id="box-17"class="square"></Text>
-        <Text id="box-18"class="square"></Text>
-        <Text id="box-19"class="square"></Text>
-        <Text id="box-20"class="square"></Text>
-      </div>
-      <div class="grid">
-        <Text id="box-21"class="square"></Text>
-        <Text id="box-22"class="square"></Text>
-        <Text id="box-23"class="square"></Text>
-        <Text id="box-24"class="square"></Text>
-        <Text id="box-25"class="square"></Text>
-        <Text id="box-26"class="square"></Text>
-        <Text id="box-27"class="square"></Text>
-      </div>
-      <div class="grid">
-        <Text id="box-28"class="square"></Text>
-        <Text id="box-29"class="square"></Text>
-        <Text id="box-30"class="square"></Text>
-        <Text id="box-31"class="square"></Text>
-        <Text id="box-32"class="square"></Text>
-        <Text id="box-33"class="square"></Text>
-        <Text id="box-34"class="square"></Text>
-      </div>
-      <div class="grid">
-        <Text id="box-35"class="square"></Text>
-        <Text id="box-36"class="square"></Text>
-        <Text id="box-37"class="square"></Text>
-        <Text id="box-38"class="square"></Text>
-        <Text id="box-39"class="square"></Text>
-        <Text id="box-40"class="square"></Text>
-        <Text id="box-41"class="square"></Text>
-      </div>-->
+      <div id="calendar" class="grid"></div>
     </div>
 
     <div style="display:flex;justify-content: center;">
