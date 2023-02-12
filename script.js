@@ -260,11 +260,11 @@ if (lastDay.getDay() !==6) {
     if (prevOrNext == 'next') {
         document.getElementById('calendar').classList.add(`animate__animated`)
     document.getElementById('calendar').classList.add(`animate__fadeInRight`)
-    document.getElementById('calendar').classList.add(`animate__faster`)
+    document.getElementById('calendar').classList.add(`animate__fast`)
     } else {
     document.getElementById('calendar').classList.add(`animate__animated`)
     document.getElementById('calendar').classList.add(`animate__fadeInLeft`)
-    document.getElementById('calendar').classList.add(`animate__faster`)
+    document.getElementById('calendar').classList.add(`animate__fast`)
     }
 }
 
@@ -272,8 +272,8 @@ function nextMonth() {
  selectedMonth = new Date(selectedMonth.getFullYear(),selectedMonth.getMonth()+1)
  document.getElementById('calendar').classList.add(`animate__animated`)
  document.getElementById('calendar').classList.add(`animate__fadeOutLeft`)
- document.getElementById('calendar').classList.add(`animate__faster`)
- setTimeout(()=>generateCalendar(selectedMonth,'next'), 200)
+ document.getElementById('calendar').classList.add(`animate__fast`)
+ setTimeout(()=>generateCalendar(selectedMonth,'next'), 350)
  //generateCalendar(selectedMonth)
 
 }
@@ -283,8 +283,8 @@ function prevMonth() {
     generateCalendar(selectedMonth)
     document.getElementById('calendar').classList.add(`animate__animated`)
     document.getElementById('calendar').classList.add(`animate__fadeOutRight`)
-    document.getElementById('calendar').classList.add(`animate__faster`)
-    setTimeout(()=>generateCalendar(selectedMonth,'prev'), 200)
+    document.getElementById('calendar').classList.add(`animate__fast`)
+    setTimeout(()=>generateCalendar(selectedMonth,'prev'), 350)
 }
 
 
