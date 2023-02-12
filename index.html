@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xiaoyi Schedule</title>
+  <meta name="description" content="">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--<div style="padding-left:20px;display:flex"><h1 id="month">March</h1> &nbsp <h1 id="year">2023</h1></div>-->
+    <div style="display: flex;flex-direction: column;width: 95%; margin: 0 auto;">
+      <div style="display:flex;margin: 0vw 7vw;justify-content: space-between;">
+        <div style="display:flex"><h2 id="month">March</h2> &nbsp <h2 id="year">2023</h2>
+        </div>
+        <div style="display:flex;width:25%;justify-content: space-between;">
+          <h2 onclick="prevMonth()"><</h2>
+          <h2 onclick="nextMonth()">></h2>
+        </div>
+      </div>
+      <div class="grid">
+        <Text class="square">Su</Text>
+        <Text class="square">Mo</Text>
+        <Text class="square">Tu</Text>
+        <Text class="square">We</Text>
+        <Text class="square">Th</Text>
+        <Text class="square">Fr</Text>
+        <Text class="square">Sa</Text>
+      </div>
+      <div id="calendar" class="grid" data-role="touch" data-on-swipe-right="prevMonth" data-on-swipe-left="nextMonth"></div>
+      <!--<div class="grid">
+          <Text id="box-0"class="square"></Text>
+          <Text id="box-1" class="square"></Text>
+          <Text id="box-2"class="square"></Text>
+          <Text id="box-3"class="square"></Text>
+          <Text id="box-4"class="square"></Text>
+          <Text id="box-5"class="square"></Text>
+          <Text id="box-6"class="square"></Text>
+      </div>
+      <div class="grid">
+        <Text id="box-7"class="square"></Text>
+        <Text id="box-8"class="square"></Text>
+        <Text id="box-9"class="square"></Text>
+        <Text id="box-10"class="square"></Text>
+        <Text id="box-11"class="square"></Text>
+        <Text id="box-12"class="square"></Text>
+        <Text id="box-13"class="square"></Text>
+      </div>
+      <div class="grid">
+        <Text id="box-14"class="square"></Text>
+        <Text id="box-15"class="square"></Text>
+        <Text id="box-16"class="square"></Text>
+        <Text id="box-17"class="square"></Text>
+        <Text id="box-18"class="square"></Text>
+        <Text id="box-19"class="square"></Text>
+        <Text id="box-20"class="square"></Text>
+      </div>
+      <div class="grid">
+        <Text id="box-21"class="square"></Text>
+        <Text id="box-22"class="square"></Text>
+        <Text id="box-23"class="square"></Text>
+        <Text id="box-24"class="square"></Text>
+        <Text id="box-25"class="square"></Text>
+        <Text id="box-26"class="square"></Text>
+        <Text id="box-27"class="square"></Text>
+      </div>
+      <div class="grid">
+        <Text id="box-28"class="square"></Text>
+        <Text id="box-29"class="square"></Text>
+        <Text id="box-30"class="square"></Text>
+        <Text id="box-31"class="square"></Text>
+        <Text id="box-32"class="square"></Text>
+        <Text id="box-33"class="square"></Text>
+        <Text id="box-34"class="square"></Text>
+      </div>
+      <div class="grid">
+        <Text id="box-35"class="square"></Text>
+        <Text id="box-36"class="square"></Text>
+        <Text id="box-37"class="square"></Text>
+        <Text id="box-38"class="square"></Text>
+        <Text id="box-39"class="square"></Text>
+        <Text id="box-40"class="square"></Text>
+        <Text id="box-41"class="square"></Text>
+      </div>-->
+    </div>
+
+    <div style="display:flex;justify-content: center;">
+      <div style="display:flex;align-items: center">
+        <div style="margin-right:5px;width:15px;height:15px;background-color: #92BAF5;border-radius: 15px;"></div><p style="font-size: 15px;">Rest</p>
+      </div>
+      <div style="display:flex;align-items: center;margin-left: 20px;">
+      <div style="margin-right:5px;width:15px;height:15px;background-color: #FEA2A2;border-radius: 15px;"></div><p style="font-size: 15px;">Working</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.korzh.com/metroui/v4/js/metro.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.square {
+    aspect-ratio: 1/ 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:10vw;
+    font-size:16px;
+    margin:1vw 1vw;
+    border-radius: 10vw;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.grid {
+  display:grid; 
+  grid-template-columns:auto auto auto auto auto auto auto;
+  margin: 0 auto;
+}
+
+.opacity25 {
+  opacity: 25%;
+}
+
+.rest {
+  background-color: #92BAF5;
+}
+
+.working {
+  background-color: #FEA2A2;
+}
